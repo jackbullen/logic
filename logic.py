@@ -50,7 +50,8 @@ def list_checkpoints(project_name):
 
 	print("Available checkpoints:")
 	for dir in os.listdir(os.path.join(checkpoint_dir)):
-		print(dir)
+		if dir.endswith('.logicx'):
+			print(dir)
 
 def list_projects(num=5, size=False, recent=True):
 	'''
